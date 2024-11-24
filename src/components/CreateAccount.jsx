@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/style-CA.css';
+import '../styles/CreateAccount.css';
 import book1 from '../images/book.image.jpg';
 
 const CreateAccount = () => {
@@ -87,7 +87,4 @@ const CreateAccount = () => {
 };
 
 export default CreateAccount;
-
-
-
 

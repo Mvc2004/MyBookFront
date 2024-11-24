@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Necesitas instalar react-router-dom si aún no lo tienes
-import '../styles/style.css';
+import '../styles/Login.css';
 import book2 from '../images/book.image2.jpg'; // Asegúrate de que la imagen esté en la carpeta src.
 
 const Login = () => {

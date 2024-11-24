@@ -1,0 +1,158 @@
+/* Estilo general para el contenedor principal */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Altura completa de la ventana */
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Fondo claro */
+  overflow: hidden; /* Evita desplazamiento no deseado */
+}
+
+/* Estilo para el lado izquierdo */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b5d4d4; /* Fondo complementario */
+  padding: 20px;
+}
+
+.left img {
+  max-width: 90%; /* Imagen responsiva */
+  max-height: 90%;
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Estilo para el lado derecho */
+.right {
+  flex: 1;
+  padding: 30px 50px;
+  background-color: white;
+  border-left: 5px solid #b5d4d4; /* Línea decorativa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+.right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #333; /* Texto oscuro */
+}
+
+/* Grupos de entrada */
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #b5d4d4;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(181, 212, 212, 0.7); /* Efecto visual */
+}
+
+/* Botón de inicio de sesión */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #b5d4d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.submit-btn:hover {
+  background-color: #a1c4c4;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Contenedor de enlaces */
+.link-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link-container a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+  color: #0056b3;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .content {
+      flex-direction: column; /* Cambia a diseño vertical */
+      height: auto;
+  }
+
+  .left, .right {
+      flex: none;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .right {
+      border-left: none;
+      border-top: 5px solid #b5d4d4; /* Línea decorativa superior */
+      box-shadow: none;
+  }
+
+  .right h1 {
+      font-size: 2rem;
+  }
+
+  .submit-btn {
+      font-size: 1rem;
+  }
+
+  .link-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .link-container a {
+      margin-bottom: 10px;
+  }
+}
