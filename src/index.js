@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './App'; // Importa el componente principal de la aplicación
 
+// Crea el punto de entrada para renderizar React en el DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Renderiza el componente principal App dentro del contenedor 'root'
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Registra un Service Worker para habilitar la funcionalidad PWA

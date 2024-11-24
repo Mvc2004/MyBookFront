@@ -1,0 +1,110 @@
+/* Barra de navegación en Home */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b5d4d4;
+    padding: 10px 20px;  /* Reduce el padding vertical */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    width: 40px;  /* Reduce el tamaño del logo */
+    height: auto;
+  }
+  
+  .navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
+    width: 70%;  /* Ocupa solo el 70% del ancho de la barra */
+  }
+  
+  .navbar-items a {
+    color: rgb(22, 20, 20);
+    text-decoration: none;
+    padding: 8px 15px;  /* Reduce el padding de los enlaces */
+    margin: 0 12px;  /* Reduce el espacio entre los enlaces */
+    font-size: 1.0rem;  /* Reduce el tamaño de la fuente */
+    border-radius: 5px;
+  }
+  
+  .navbar-items a:hover {
+    background-color: #555;
+  }
+  
+  .search-bar {
+    padding: 8px;  /* Reduce el padding de la barra de búsqueda */
+    font-size: 0.9rem;  /* Reduce el tamaño de la fuente */
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #0f0f0f;
+  }
+  
+  /* Ajuste específico para el enlace de Perfil */
+  .navbar-items a.profile {
+    margin-right: 25px; /* Espacio adicional para 'Perfil' */
+  }
+  
+  /* Estilo para el botón desplegable */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #b5d4d4;
+    color: rgb(14, 13, 13);
+    padding: 8px 15px;  /* Reduce el padding */
+    font-size: 1.0rem;  /* Reduce el tamaño de la fuente */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover {
+    background-color: #555;
+  }
+  
+  /* Contenido del menú desplegable */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f7f7;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 10px 15px;  /* Reduce el padding de los elementos del menú */
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;  /* Reduce el tamaño de la fuente */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0e0d0d;
+  }
+  
+  /* Contenido principal de la página */
+  .content {
+    padding: 90px 20px 20px;
+    background-color: #f9f9f9;
+    min-height: 500px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  
