@@ -15,10 +15,17 @@ const Home = () => {
           <div className="dropdown">
             <button className="dropbtn">Categorías</button>
             <div className="dropdown-content">
-              <Link to="/category1">Categoría 1</Link>
-              <Link to="/category2">Categoría 2</Link>
-              <Link to="/category3">Categoría 3</Link>
-              <Link to="/category4">Categoría 4</Link>
+            <Link to="/terror">Terror</Link>
+            <Link to="/romance">Romance</Link>
+            <Link to="/aventura">Aventura</Link>
+            <Link to="/ciencia-ficcion">Ciencia Ficción</Link>
+            <Link to="/fantasia">Fantasía</Link>
+            <Link to="/misterio">Misterio</Link>
+            <Link to="/suspenso">Suspenso</Link>
+            <Link to="/drama">Drama</Link>
+            <Link to="/historico">Histórico</Link>
+            <Link to="/humor">Humor</Link>
+            <Link to="/autoayuda">Autoayuda</Link>
             </div>
           </div>
 
