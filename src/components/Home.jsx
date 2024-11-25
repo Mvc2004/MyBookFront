@@ -15,23 +15,28 @@ const Home = () => {
           <div className="dropdown">
             <button className="dropbtn">Categorías</button>
             <div className="dropdown-content">
-            <Link to="/terror">Terror</Link>
-            <Link to="/romance">Romance</Link>
-            <Link to="/aventura">Aventura</Link>
-            <Link to="/ciencia-ficcion">Ciencia Ficción</Link>
-            <Link to="/fantasia">Fantasía</Link>
-            <Link to="/misterio">Misterio</Link>
-            <Link to="/suspenso">Suspenso</Link>
-            <Link to="/drama">Drama</Link>
-            <Link to="/historico">Histórico</Link>
-            <Link to="/humor">Humor</Link>
-            <Link to="/autoayuda">Autoayuda</Link>
+              <Link to="/terror">Terror</Link>
+              <Link to="/romance">Romance</Link>
+              <Link to="/aventura">Aventura</Link>
+              <Link to="/ciencia-ficcion">Ciencia Ficción</Link>
+              <Link to="/fantasia">Fantasía</Link>
+              <Link to="/misterio">Misterio</Link>
+              <Link to="/suspenso">Suspenso</Link>
+              <Link to="/drama">Drama</Link>
+              <Link to="/historico">Histórico</Link>
+              <Link to="/humor">Humor</Link>
+              <Link to="/autoayuda">Autoayuda</Link>
             </div>
           </div>
 
-          <Link to="/favorites">Favoritos</Link>
+          {/* Enlace a la página de Favoritos */}
+          <Link to="/favoritos">Favoritos</Link>
+
+          {/* Barra de búsqueda */}
           <input type="text" className="search-bar" placeholder="Buscar..." />
-          <Link to="/profile">Perfil</Link>
+
+          {/* Enlace a la página de Perfil */}
+          <Link to="/perfil">Perfil</Link>
         </div>
       </div>
       
@@ -45,3 +50,4 @@ const Home = () => {
 };
 
 export default Home;
+

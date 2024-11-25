@@ -1,129 +1,103 @@
-/* Barra de navegación en Home */
+/* Barra de navegación */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b5d4d4;
-    padding: 10px 20px; /* Ajuste del padding para mejor separación */
+    background-color: #79cadf;
+    padding: 10px 20px;
     color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega un sombreado ligero */
-}
-
-/* Logo en la barra de navegación */
-.logo img {
-    width: 40px; /* Tamaño del logo */
-    height: auto;
-}
-
-/* Contenedor de elementos de navegación */
-.navbar-items {
+  }
+  
+  /* Logo se mantiene a la izquierda */
+  .logo {
+    flex: 1;
+  }
+  
+  .logo img {
+    width: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+  }
+  
+  /* Contenedor de los elementos del menú */
+  .navbar-items {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Elementos alineados hacia la izquierda */
-    width: 70%; /* Ajusta el espacio ocupado por los elementos */
-}
-
-/* Estilo de los enlaces de navegación */
-.navbar-items a {
-    color: rgb(22, 20, 20); /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    padding: 8px 15px; /* Espaciado interno */
-    margin: 0 12px; /* Espaciado entre enlaces */
-    font-size: 1rem; /* Tamaño del texto */
+    justify-content: center; /* Centra los elementos dentro de este contenedor */
+    flex: 2;
+  }
+  
+  /* Estilos para los enlaces en la barra de navegación */
+  .navbar-items a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+  
+  .navbar-items a:hover {
+    color: #f1c40f;
+  }
+  
+  /* Barra de búsqueda */
+  .search-bar {
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-right: 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
-}
-
-/* Efecto hover en enlaces */
-.navbar-items a:hover {
-    background-color: #555;
-    color: white; /* Cambia el color del texto al pasar el mouse */
-}
-
-/* Barra de búsqueda */
-.search-bar {
-    padding: 8px; /* Ajusta el padding interno */
-    font-size: 0.9rem; /* Tamaño del texto */
-    margin-right: 15px; /* Espaciado derecho */
-    border-radius: 5px;
-    border: 1px solid #0f0f0f;
-    width: 200px; /* Ancho de la barra de búsqueda */
-}
-
-/* Estilo específico para el enlace de Perfil */
-.navbar-items a.profile {
-    margin-right: 25px; /* Espacio adicional a la derecha */
-}
-
-/* Contenedor del menú desplegable */
-.dropdown {
+  }
+  
+  /* Menú desplegable para Categorías */
+  .dropdown {
     position: relative;
     display: inline-block;
-}
-
-/* Botón del menú desplegable */
-.dropbtn {
-    background-color: #b5d4d4;
-    color: rgb(14, 13, 13); /* Color del texto */
-    padding: 8px 15px; /* Ajuste del padding */
-    font-size: 1rem; /* Tamaño del texto */
+  }
+  
+  .dropbtn {
+    background-color: #7ed4c2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto hover en el botón del menú desplegable */
-.dropbtn:hover {
-    background-color: #555;
-    color: white; /* Cambia el color del texto */
-}
-
-/* Contenido del menú desplegable */
-.dropdown-content {
-    display: none; /* Inicialmente oculto */
+    margin-right: 15px;
+  }
+  
+  .dropbtn:hover {
+    background-color: #f1c40f;
+  }
+  
+  .dropdown-content {
+    display: none;
     position: absolute;
-    background-color: #f8f7f7;
+    background-color: #30313098;
     min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
-}
-
-/* Mostrar el menú desplegable al pasar el mouse */
-.dropdown:hover .dropdown-content {
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: block;
-}
-
-/* Enlaces dentro del menú desplegable */
-.dropdown-content a {
-    color: #333; /* Color del texto */
-    padding: 10px 15px; /* Ajuste del padding interno */
-    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-    font-size: 0.9rem; /* Tamaño del texto */
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto hover en los enlaces del menú desplegable */
-.dropdown-content a:hover {
-    background-color: #0e0d0d;
-    color: white; /* Cambia el color del texto */
-}
-
-/* Contenido principal de la página */
-.content {
-    padding: 90px 20px 20px; /* Margen superior para no superponerse con la barra */
-    background-color: #f9f9f9; /* Fondo de la sección principal */
-    min-height: 500px; /* Altura mínima */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1c40f;
+  }
+  
+  /* Estilo del contenido principal */
+  .content {
+    margin-top: 80px; /* Para evitar que el contenido quede tapado por la barra de navegación */
+    padding: 20px;
     text-align: center;
-    font-size: 1.5rem; /* Tamaño del texto */
-    color: #333; /* Color del texto */
-    margin-top: 10px; /* Separación adicional de la barra */
-}
-
+  }
+  
