@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/CreateAccount.css';
-import book1 from '../images/book.image.jpg';
+import book1 from '../images/book.image2.jpg';
 
 const CreateAccount = () => {
   const [name, setName] = useState('');
@@ -79,6 +79,7 @@ const CreateAccount = () => {
             <button className="submit-btn" type="submit">
               Crear Cuenta
             </button>
+            <button className="submit-btn" type="">Volver al incio </button>
           </div>
         </form>
       </div>
