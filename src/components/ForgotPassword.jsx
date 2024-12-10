@@ -40,9 +40,12 @@ const ForgotPassword = () => {
               required
             />
           </div>
-          <button type="submit" className="submit-btn">
-            Recuperar Contraseña
-          </button>
+          <div className="button-group">
+            <button type="submit" className="submit-btn">
+              Recuperar Contraseña
+            </button>
+            <a href="/" className='login-btn'>Volver al incio</a>
+          </div>
         </form>
       </div>
     </div>

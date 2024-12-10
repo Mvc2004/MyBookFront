@@ -22,68 +22,71 @@ const CreateAccount = () => {
   };
 
   return (
-    <div className="content">
-      <div className="right">
-        <img src={book1} alt="Imagen de fondo" />
+    <body> 
+      <div className="content">
+        <div className="right">
+          <img src={book1} alt="Imagen de fondo" />
+        </div>
+        <div className="left">
+          <h1>Crear Cuenta</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="input-group">
+              <label htmlFor="name">Nombre Completo</label>
+              <input
+                type="text"
+                id="name"
+                name="nombre"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="email">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="securityAnswer">
+                ¿Cuál es tu libro favorito? (Pregunta de seguridad)
+              </label>
+              <input
+                type="text"
+                id="securityAnswer"
+                name="securityAnswer"
+                value={securityAnswer}
+                onChange={(e) => setSecurityAnswer(e.target.value)}
+                required
+              />
+            </div>
+            <div className="button-group">
+              <button className="submit-btn" type="submit">
+                Crear Cuenta
+              </button>
+              <a href="/" className="login-btn">Volver al inicio</a>
+            </div>
+          </form>
+        </div>
       </div>
-      <div className="left">
-        <h1>Crear Cuenta</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="name">Nombre Completo</label>
-            <input
-              type="text"
-              id="name"
-              name="nombre"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="email">Correo Electrónico</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="password">Contraseña</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="securityAnswer">
-              ¿Cuál es tu libro favorito? (Pregunta de seguridad)
-            </label>
-            <input
-              type="text"
-              id="securityAnswer"
-              name="securityAnswer"
-              value={securityAnswer}
-              onChange={(e) => setSecurityAnswer(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <button className="submit-btn" type="submit">
-              Crear Cuenta
-            </button>
-            <button className="submit-btn" type="">Volver al incio </button>
-          </div>
-        </form>
-      </div>
-    </div>
+      <script src="./script.js"></script>
+      </body>
   );
 };
 

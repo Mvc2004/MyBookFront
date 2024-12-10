@@ -98,6 +98,31 @@ form {
 
 }
 
+.button-group {
+  display: flex;
+  flex-direction: column; /* Cambia a columna para apilar los botones */
+  align-items: center; /* Centra los botones */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.login-btn {
+  margin-top: 10px; /* Espaciado entre los botones */
+  background-color: #b5d4d4;
+  color: white;
+  border-bottom: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 10px 120px; /* Aumenta el padding para un mejor aspecto */
+  text-align: center; /* Centra el texto */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añade transición */
+}
+
+.login-btn:hover {
+  background-color: #a1c4c4; /* Cambia el color al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
 .submit-btn:hover {
   background-color: #a1c4c4;
   transform: translateY(-2px);
