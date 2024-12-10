@@ -7,37 +7,64 @@ const CreateAccount = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [securityAnswer, setSecurityAnswer] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Evitar el comportamiento por defecto del formulario
+    setErrorMessage(''); // Limpiar el mensaje de error
 
-    // Crear el objeto con la información del usuario
-    const Create = {
-      nombre: name,
-      email: email,
-      r_seguridad: securityAnswer,
-      contraseña: password,
-    };
+    try {
+      // Verificar si el correo ya existe
+      const response = await fetch('http://localhost:4000/api/usuarios/');
+      
+      if (!response.ok) {
+        throw new Error('Error en la respuesta de la API');
+      }
+  
+      const data = await response.json();
+      console.log(data); // Verifica la estructura de la respuesta
+  
+      // Accede al array de usuarios
+      const userArray = data.body || []; // Asegúrate de que existe el array
+      const user = userArray.find(user => user.email.toLowerCase() === email.toLowerCase()); 
+      console.log(user)// Comparar sin importar mayúsculas/minúsculas
+  
+      if (user) {
+        setErrorMessage('Correo electrónico ya vinculado a una cuenta');
+        alert ('Este correo electronico ya se encuentra vinculado a otra cuenta') // Mostrar mensaje de error
+      } else {
+        // Crear el objeto con la información del usuario
+        const Create = {
+          nombre: name,
+          email: email,
+          r_seguridad: securityAnswer,
+          contraseña: password,
+        };
+    
+        const CreateJson = JSON.stringify(Create);
+        console.log(CreateJson);
+    
+        // Hacer el fetch a la API para crear la cuenta
+        const createResponse = await fetch('http://localhost:4000/api/usuarios', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', // Indica que el cuerpo es JSON
+          },
+          body: CreateJson,
+        });
 
-    const CreateJson = JSON.stringify(Create);
-    console.log(CreateJson);
+        if (!createResponse.ok) {
+          throw new Error('Error al crear la cuenta');
+        }
 
-    // Hacer el fetch a la API
-    fetch('http://localhost:4000/api/usuarios', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json', // Indica que el cuerpo es JSON
-      },
-      body: CreateJson,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        alert('Cuenta creada exitosamente.headers No olvides tu respuesta de seguridad.');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+        const createData = await createResponse.json();
+        console.log(createData);
+        alert('Cuenta creada exitosamente. No olvides tu respuesta de seguridad.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setErrorMessage('Ocurrió un error. Intenta nuevamente.'); // Manejo de errores
+    }
   };
 
   return (
