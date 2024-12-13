@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/libro1.png'; // Para el logo
 import '../styles/Home.css'; // Para los estilos
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
       {/* Barra de navegación */}
       <div className="navbar">
         <div className="logo">
-          <img src="logo.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
         <div className="navbar-items">
           {/* Menú desplegable para Categorías */}
