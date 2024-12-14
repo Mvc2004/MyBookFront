@@ -1,0 +1,37 @@
+.categoria-container {
+  padding: 20px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.book-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.book-option {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.book-option:hover {
+  background-color: #0056b3;
+}
